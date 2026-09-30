@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevBlog - Modern Blog</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container nav-container">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">D</span>
+                DevBlog
+            </a>
+
+            <nav class="navbar" id="navbar">
+                <a href="#home">Home</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#categories">Categories</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button class="icon-btn" id="themeBtn">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="container hero-content">
+
+            <div class="hero-text">
+
+                <span class="hero-label">
+                    ✨ Welcome to DevBlog
+                </span>
+
+                <h1>
+                    Learn. Build.
+                    <span>Grow.</span>
+                </h1>
+
+                <p>
+                    Discover useful articles about web development,
+                    programming, technology, career growth and more.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#blogs" class="primary-btn">
+                        Explore Blogs →
+                    </a>
+
+                    <a href="#about" class="secondary-btn">
+                        About Us
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+
+                <div class="hero-card">
+                    <div class="code-window">
+
+                        <div class="window-top">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="code-content">
+                            <p><span class="code-keyword">const</span> developer = {</p>
+                            <p class="indent">
+                                skills: <span class="code-string">"JavaScript"</span>,
+                            </p>
+                            <p class="indent">
+                                passion: <span class="code-string">"Coding"</span>,
+                            </p>
+                            <p class="indent">
+                                goal: <span class="code-string">"Build"</span>
+                            </p>
+                            <p>};</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Search -->
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search articles..."
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories" id="categories">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>EXPLORE</span>
+
+                <h2>Browse Categories</h2>
+
+            </div>
+
+            <div class="category-buttons">
+
+                <button class="category-btn active" data-category="All">
+                    All
+                </button>
+
+                <button class="category-btn" data-category="Web Development">
+                    Web Development
+                </button>
+
+                <button class="category-btn" data-category="JavaScript">
+                    JavaScript
+                </button>
+
+                <button class="category-btn" data-category="Programming">
+                    Programming
+                </button>
+
+                <button class="category-btn" data-category="Career">
+                    Career
+                </button>
+
+                <button class="category-btn" data-category="Technology">
+                    Technology
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Blog Section -->
+    <section class="blogs" id="blogs">
+
+        <div class="container">
+
+            <div class="section-heading blog-heading">
+
+                <div>
+                    <span>OUR ARTICLES</span>
+                    <h2>Latest Blogs</h2>
+                </div>
+
+                <p id="resultCount"></p>
+
+            </div>
+
+            <div class="blog-grid" id="blogContainer">
+            </div>
+
+            <div class="no-results" id="noResults">
+
+                <div>🔎</div>
+
+                <h3>No articles found</h3>
+
+                <p>
+                    Try searching with another keyword.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Newsletter -->
+    <section class="newsletter" id="contact">
+
+        <div class="container">
+
+            <div class="newsletter-box">
+
+                <div>
+
+                    <span>STAY UPDATED</span>
+
+                    <h2>
+                        Get the latest articles
+                        in your inbox.
+                    </h2>
+
+                    <p>
+                        Join our newsletter and receive useful
+                        development and technology articles.
+                    </p>
+
+                </div>
+
+                <form id="newsletterForm">
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <div class="container about-content">
+
+            <div class="about-image">
+                <div class="about-icon">💻</div>
+            </div>
+
+            <div class="about-text">
+
+                <span>ABOUT DEV BLOG</span>
+
+                <h2>
+                    Sharing knowledge,
+                    one article at a time.
+                </h2>
+
+                <p>
+                    DevBlog is a simple technology blog created for
+                    developers and students who want to learn
+                    programming, web development and modern technology.
+                </p>
+
+                <p>
+                    Our goal is to make technical concepts simple,
+                    practical and easy to understand.
+                </p>
+
+                <a href="#blogs" class="primary-btn">
+                    Start Reading →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div class="footer-brand">
+
+                <a href="#" class="logo">
+                    <span class="logo-icon">D</span>
+                    DevBlog
+                </a>
+
+                <p>
+                    Learn. Build. Grow.
+                </p>
+
+            </div>
+
+            <div class="footer-links">
+
+                <a href="#home">Home</a>
+                <a href="#blogs">Blogs</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Instagram</a>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 DevBlog. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- Blog Modal -->
+    <div class="modal" id="blogModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose">
+                ×
+            </button>
+
+            <div class="modal-image" id="modalImage">
+            </div>
+
+            <div class="modal-body">
+
+                <span class="modal-category" id="modalCategory">
+                </span>
+
+                <h2 id="modalTitle">
+                </h2>
+
+                <div class="modal-meta" id="modalMeta">
+                </div>
+
+                <p id="modalDescription">
+                </p>
+
+                <div class="modal-extra">
+
+                    <p>
+                        💡 <strong>Key Takeaway:</strong>
+                    </p>
+
+                    <p id="modalTakeaway">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="toast" id="toast">
+        Successfully subscribed! 🎉
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
